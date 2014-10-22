@@ -73,7 +73,7 @@ var FacebookUserTest = cc.Layer.extend({
 
     },
     activateAppClick: function () {
-        if (cc.sys.isNative) {
+        if (cc.sys.isNative || facebook_is_canvas) {
             facebook.activateApp();
             this.result.setString("activateApp is invoked");
         }
@@ -82,7 +82,7 @@ var FacebookUserTest = cc.Layer.extend({
         }
     },
     LogEventClick: function () {
-        if (cc.sys.isNative) {
+        if (cc.sys.isNative || facebook_is_canvas) {
             var parameters = {};
             var floatVal = 888.888;
             parameters[window["plugin"].FacebookAgent.AppEventParam.SUCCESS] = window["plugin"].FacebookAgent.AppEventParamValue.VALUE_YES;
@@ -165,7 +165,7 @@ var FacebookUserTest = cc.Layer.extend({
         });
     },
     LogPurchaseClick: function (sender) {
-        if (cc.sys.isNative) {
+        if (cc.sys.isNative || facebook_is_canvas) {
             var params = {};
             // All supported parameters are listed here
             params[window["plugin"].FacebookAgent.AppEventParam.CURRENCY] = "CNY";

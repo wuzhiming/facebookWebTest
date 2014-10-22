@@ -1,4 +1,5 @@
 var winSize = cc.winSize;
+var facebook_is_canvas = true;
 var FacebookItem = [
     {"itemName": "FacebookUserTest", "click": "userClick"},
     {"itemName": "FacebookShareTest", "click": "shareClick"}
